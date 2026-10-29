@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netops-compliance-lab"
+version = "0.1.0"
+description = "Offline multi-vendor network compliance lab"
+requires-python = ">=3.12"
+dependencies = ["PyYAML==6.0.2", "pydantic==2.13.4"]
+
+[project.optional-dependencies]
+dev = ["ruff==0.14.3"]
+
+[project.scripts]
+netops-compliance = "netops_compliance.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

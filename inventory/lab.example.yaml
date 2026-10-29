@@ -1,0 +1,16 @@
+devices:
+  - name: cisco01
+    host: 192.0.2.11
+    platform: cisco_ios
+    credential_ref: lab_default
+    groups: [lab, access]
+  - name: arista01
+    host: 192.0.2.12
+    platform: arista_eos
+    credential_ref: lab_default
+    groups: [lab, access]
+  - name: juniper01
+    host: 192.0.2.13
+    platform: juniper_junos
+    credential_ref: lab_default
+    groups: [lab, edge]

@@ -1,0 +1,298 @@
+{
+  "schema_version": "1",
+  "run_id": "20261029T222044-aa6ea6f4aa0a",
+  "timestamp": "2026-10-29T22:20:44.903416+00:00",
+  "mode": "offline",
+  "dry_run": true,
+  "command": "audit",
+  "scenario": "noncompliant",
+  "inventory_identity": "17324c0437e29ef75ff3b0b8bad1e1198b129c8e242cb49af7a96b275e65be33",
+  "rule_version": "1.0.0",
+  "rule_identity": "b5ac3e41de4a8c3ac3b8e8ebd2b7c5639f3d8b21b9b8f3147e4827891aa4d73f",
+  "selected_devices": [
+    "cisco01",
+    "arista01",
+    "juniper01"
+  ],
+  "summary": {
+    "pass": 1,
+    "fail": 23,
+    "error": 0,
+    "not-applicable": 0,
+    "device_errors": 0
+  },
+  "exit_code": 1,
+  "devices": [
+    {
+      "device": "cisco01",
+      "platform": "cisco_ios",
+      "baseline_hash": "dec4b545385c5c352179088f54effbfe733f7edad09b0202ff84507c455d5f74",
+      "collected": true,
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "platform": "arista_eos",
+      "baseline_hash": "496f34668272881e5d87291c9be0559bd7870dacc43c4d2a0b221e6fe9a94756",
+      "collected": true,
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "platform": "juniper_junos",
+      "baseline_hash": "8f5f95659b54aaf6069c87cae45cc26d2b96c74b5535b995ec939bb92ad7a973",
+      "collected": true,
+      "error": null
+    }
+  ],
+  "findings": [
+    {
+      "device": "cisco01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": false,
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "Authorized lab access only.",
+      "observed": "missing or different",
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "lab-*",
+      "observed": "different naming pattern",
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": [
+        "http"
+      ],
+      "error": null
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": false,
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "Authorized lab access only.",
+      "observed": "missing or different",
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "lab-*",
+      "observed": "different naming pattern",
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "pass",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "arista01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "fail",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": [],
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": false,
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "Authorized lab access only.",
+      "observed": "missing or different",
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "fail",
+      "expected": "lab-*",
+      "observed": "different naming pattern",
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": [
+        "http"
+      ],
+      "error": null
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "fail",
+      "expected": true,
+      "observed": true,
+      "error": null
+    }
+  ],
+  "changes": [],
+  "backups": [],
+  "approval": null,
+  "post_change_findings": []
+}

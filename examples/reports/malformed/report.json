@@ -1,0 +1,294 @@
+{
+  "schema_version": "1",
+  "run_id": "20261029T222045-70a3b5e425c9",
+  "timestamp": "2026-10-29T22:20:45.662815+00:00",
+  "mode": "offline",
+  "dry_run": true,
+  "command": "audit",
+  "scenario": "malformed",
+  "inventory_identity": "17324c0437e29ef75ff3b0b8bad1e1198b129c8e242cb49af7a96b275e65be33",
+  "rule_version": "1.0.0",
+  "rule_identity": "b5ac3e41de4a8c3ac3b8e8ebd2b7c5639f3d8b21b9b8f3147e4827891aa4d73f",
+  "selected_devices": [
+    "cisco01",
+    "arista01",
+    "juniper01"
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "error": 24,
+    "not-applicable": 0,
+    "device_errors": 3
+  },
+  "exit_code": 2,
+  "devices": [
+    {
+      "device": "cisco01",
+      "platform": "cisco_ios",
+      "baseline_hash": "2158cbe6cf81515aeeb9cd1d3ad0c9f8d7aad934c7b939281bb097e879e66794",
+      "collected": false,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "platform": "arista_eos",
+      "baseline_hash": "2158cbe6cf81515aeeb9cd1d3ad0c9f8d7aad934c7b939281bb097e879e66794",
+      "collected": false,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "platform": "juniper_junos",
+      "baseline_hash": "2158cbe6cf81515aeeb9cd1d3ad0c9f8d7aad934c7b939281bb097e879e66794",
+      "collected": false,
+      "error": "fixture_parse_error"
+    }
+  ],
+  "findings": [
+    {
+      "device": "cisco01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "Authorized lab access only.",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "lab-*",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "cisco01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "Authorized lab access only.",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "lab-*",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "arista01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "ntp_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.20"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "syslog_required",
+      "severity": "medium",
+      "status": "error",
+      "expected": [
+        "192.0.2.30"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "ssh_required",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "telnet_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "banner_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "Authorized lab access only.",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "hostname_required",
+      "severity": "low",
+      "status": "error",
+      "expected": "lab-*",
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "services_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": [
+        "http",
+        "https",
+        "ftp"
+      ],
+      "observed": null,
+      "error": "fixture_parse_error"
+    },
+    {
+      "device": "juniper01",
+      "rule_id": "snmp_disabled",
+      "severity": "high",
+      "status": "error",
+      "expected": true,
+      "observed": null,
+      "error": "fixture_parse_error"
+    }
+  ],
+  "changes": [],
+  "backups": [],
+  "approval": null,
+  "post_change_findings": []
+}

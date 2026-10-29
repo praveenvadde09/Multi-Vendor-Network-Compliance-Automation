@@ -1,0 +1,66 @@
+version: '1.0.0'
+rules:
+  - id: ntp_required
+    description: Approved NTP server is configured
+    severity: medium
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [ntp_servers]
+    check: ntp_servers_include
+    expected: [192.0.2.20]
+    remediation: manual
+  - id: syslog_required
+    description: Approved remote syslog destination is configured
+    severity: medium
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [syslog_servers]
+    check: syslog_servers_include
+    expected: [192.0.2.30]
+    remediation: manual
+  - id: ssh_required
+    description: SSH management configuration is enabled
+    severity: high
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [ssh_enabled]
+    check: ssh_enabled
+    expected: true
+    remediation: manual
+  - id: telnet_disabled
+    description: Telnet management is disabled
+    severity: high
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [telnet_enabled]
+    check: telnet_disabled
+    expected: true
+    remediation: manual
+  - id: banner_required
+    description: Required login notice is configured
+    severity: low
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [banner]
+    check: banner_equals
+    expected: "Authorized lab access only."
+    remediation: manual
+  - id: hostname_required
+    description: Hostname follows the lab naming convention
+    severity: low
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [hostname]
+    check: hostname_matches
+    expected: "lab-*"
+    remediation: manual
+  - id: services_disabled
+    description: HTTP HTTPS and FTP management are disabled
+    severity: high
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [enabled_services]
+    check: services_disabled
+    expected: [http, https, ftp]
+    remediation: manual
+  - id: snmp_disabled
+    description: SNMP is disabled in this lab baseline
+    severity: high
+    platforms: [cisco_ios, arista_eos, juniper_junos]
+    required_inputs: [snmp_enabled]
+    check: snmp_disabled
+    expected: true
+    remediation: manual
